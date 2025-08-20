@@ -1,0 +1,42 @@
+{
+	"name": "shield-backend",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"build": "rimraf dist && npx tsc",
+		"prestart": "npm run build",
+		"start": "node dist/app.js",
+		"preserve": "npm run build",
+		"serve": "concurrently \"npx tsc -w\"  \"nodemon dist/app.js\"",
+		"lint": "eslint . --ext .ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"@ai-sdk/google": "^1.2.22",
+		"@types/express": "^5.0.3",
+		"ai": "^4.3.19",
+		"axios": "^1.11.0",
+		"concurrently": "^9.2.0",
+		"dotenv": "^16.5.0",
+		"exa-js": "^1.8.23",
+		"express": "^5.1.0",
+		"newsapi": "^2.4.1",
+		"nodemon": "^3.1.10",
+		"puppeteer": "^24.15.0",
+		"rimraf": "^6.0.1",
+		"typescript": "^5.8.3",
+		"zod": "^3.24.2"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.26.0",
+		"@types/node": "^24.1.0",
+		"@typescript-eslint/eslint-plugin": "^8.32.1",
+		"@typescript-eslint/parser": "^8.32.1",
+		"globals": "^16.1.0",
+		"ts-node": "^10.9.2",
+		"typescript-eslint": "^8.32.1"
+	}
+}
