@@ -1,3 +1,4 @@
+import { google } from "@ai-sdk/google"
 export interface CustomError extends Error {
 	statusCode?: number
 	code?: number
@@ -5,3 +6,5 @@ export interface CustomError extends Error {
 	message: string
 	name: string
 }
+
+export const mainModel = google("gemini-2.0-flash")
